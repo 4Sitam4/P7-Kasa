@@ -4,7 +4,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { Home, Apropos, Logement } from '@/Pages/Public/Index'
 
 import Layout from '@/Layouts/Layout'
-import Erreur404 from '@/Pages/Public/404/404NotFound'
+import Erreur404 from '@/Pages/Public/404/404'
 
 // fonction de routage des pages publique
 const PublicRouter = () => {
