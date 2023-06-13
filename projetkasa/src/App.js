@@ -1,5 +1,5 @@
 // import des modules nécessaires
-import '@/Assets/Css/Normalizer.css'
+import 'normalize.css';
 import '@/Assets/Css/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
