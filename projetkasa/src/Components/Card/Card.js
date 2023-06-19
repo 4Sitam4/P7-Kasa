@@ -1,10 +1,13 @@
-import "@/components/Card/Card.css";
+import "./Card.css";
 
-function Card({}) {
+function Card({ id, image, titre }) {
 
     return (
-        <div className="card">
-        </div>
+        <li className="Card" id={id}>
+            <img className="Card-image" src={image} alt="Card" />
+            <div className="Card-sombre"></div>
+            <h3 className="Card-titre">{titre}</h3>
+    </li>
     )
 }
 

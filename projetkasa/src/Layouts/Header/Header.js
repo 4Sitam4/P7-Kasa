@@ -5,22 +5,10 @@ import logo from '@/Assets/Images/Components/header/LogoKasaHeader.png';
 function Header () {
     return (
         <header>
-            <img src={logo} alt="logo" className="header__logo" />
+            <a href="/"><img src={logo} alt="logo"  /></a>
             <nav>
-                <NavLink 
-                    to="/Home" 
-                    isActive={(match, location) => location.pathname === "/Home"}
-                    style={(isActive) => isActive ? {borderBottom: "1px solid color"} : {borderBottom: "unset"}}
-                >
-                    Accueil
-                </NavLink>
-                <NavLink 
-                    to="/Apropos" 
-                    isActive={(match, location) => location.pathname === "/Apropos"}
-                    style={(isActive) => isActive ? {borderBottom: "1px solid color"} : {borderBottom: "unset"}}
-                >
-                    A Propos
-                </NavLink>
+                <NavLink to="/home" className="navlink" style={({ isActive }) => isActive ? { borderBottom: "1px solid #ff6060" } : { borderBottom: "unset" }}>Accueil</NavLink>
+                <NavLink to="/a-propos" className="navlink" style={({ isActive }) => isActive ? { borderBottom: "1px solid #ff6060" } : { borderBottom: "unset" }}>À propos</NavLink>
             </nav>
         </header>
     );
