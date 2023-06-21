@@ -25,3 +25,7 @@ Kasa is a website for renting house(s) / appartement(s).
 ### Start the project (React) :
 * Go to the folder `projetkasa`
 * Run `npm run craco`
+
+## Access :
+* Website : `http://localhost:3000/`
+* API : `http://localhost:3030/`
