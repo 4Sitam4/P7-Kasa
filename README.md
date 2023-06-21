@@ -3,10 +3,10 @@
 This is the seventh project of the OpenClassrooms training course of the web developer course.
 Kasa is a website for renting house(s) / appartement(s).
 
-## Technologie used :
+### Technologie used :
 * React
 
-### Prerequisites :
+## Prerequisites :
 * Node.js
 * npm
 * Craco
