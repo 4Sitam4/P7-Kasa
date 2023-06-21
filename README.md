@@ -8,6 +8,7 @@ Kasa is a website for renting house(s) / appartement(s).
 
 ## Prerequisites :
 * Node.js
+* React
 * npm
 * Craco
 * json-server
