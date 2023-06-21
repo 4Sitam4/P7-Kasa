@@ -7,10 +7,11 @@ import imagebanner from '@/Assets/Images/Pages/Home/homeBanner.png';
 import Banner from '@/Components/Banner/Banner';
 import Card from '@/Components/Card/Card';
 
-import logementService from '@/_Services/Logement.service.js';
+import useLogementService from '@/_Services/Logement.service.js';
 
 // fonction d'appel de la page d'accueil
 const Home = () => {
+    const logementService = useLogementService();
     return (
         <section className="home">
             <Banner image={imagebanner} title="Chez vous, partout et ailleurs" />

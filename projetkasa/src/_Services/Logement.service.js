@@ -1,16 +1,32 @@
-import logements from "@/Assets/Api/Logement.json";
+import { useState, useEffect } from 'react';
 
-let GetAllLogement = () => {
-    return logements;
-}
+export const useLogementService = () => {
+    const [logements, setLogements] = useState([]);
 
-let GetLogementById = (id) => {
-    return logements.find(logement => logement.id === id);
-}
+    useEffect(() => {
+        const fetchLogements = async () => {
+            const response = await fetch('http://localhost:3030/logements');
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP! status: ${response.status}`);
+            }
+            const data = await response.json();
+            setLogements(data);
+        }
+        fetchLogements();
+    }, []);
 
-export const LogementService = {
-    GetAllLogement,
-    GetLogementById
+    const GetAllLogement = () => {
+        return logements;
+    }
+
+    const GetLogementById = (id) => {
+        return logements.find(logement => logement.id === id);
+    }
+
+    return {
+        GetAllLogement,
+        GetLogementById,
+    };
 };
 
-export default LogementService;
+export default useLogementService;
