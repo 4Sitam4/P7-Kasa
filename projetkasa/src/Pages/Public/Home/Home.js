@@ -11,14 +11,14 @@ import useLogementService from '@/_Services/Logement.service.js';
 
 // fonction d'appel de la page d'accueil
 const Home = () => {
-    const logementService = useLogementService();
+    const GetAllLogement = useLogementService();
     return (
         <section className="home">
             <Banner image={imagebanner} title="Chez vous, partout et ailleurs" />
 
             <ul className='listelogements'>
                 {
-                    logementService.GetAllLogement().map((logement) =>
+                    GetAllLogement().map((logement) =>
                         <NavLink key={logement.id} to={"/logement/" + logement.id + "/#"}>
                             <Card key={logement.id} id={logement.id} image={logement.cover} titre={logement.title} />
                         </NavLink>

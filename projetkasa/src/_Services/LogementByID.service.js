@@ -15,10 +15,10 @@ export const useLogementService = () => {
         fetchLogements();
     }, []);
 
-    const GetAllLogement = () => {
-        return logements;
+    const GetLogementById = (id) => {
+        return logements.find(logement => logement.id === id);
     }
-    return GetAllLogement;
+    return GetLogementById;
 };
 
 export default useLogementService;
