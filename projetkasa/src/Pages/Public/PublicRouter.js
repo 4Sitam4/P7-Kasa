@@ -4,7 +4,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { Home, Apropos, Logement } from '@/Pages/Public/Index'
 
 import Layout from '@/Layouts/Layout'
-import Erreur404 from '@/Pages/Public/404/404'
+import Page404 from '@/Pages/Public/Page_404/Page_404'
 
 // fonction de routage des pages publique
 const PublicRouter = () => {
@@ -16,7 +16,7 @@ const PublicRouter = () => {
                 <Route path="/home" element={<Home />} />
                 <Route path="/logement/:id" element={<Logement />} />
                 <Route path="/a-propos" element={<Apropos />} />
-                <Route path="*" element={<Erreur404 />} />
+                <Route path="*" element={<Page404 />} />
             </Route>
         </Routes>
 

@@ -33,11 +33,12 @@
 
 .Card-titre {
     position: absolute;
-    left: 20px;
-    bottom: 20px;
+    bottom: 0%;
+    left: 5%;
     margin-right: 20px;
     color: #ffffff;
     font-size: 18px;
     line-height: 25.67px;
     font-weight: 500;
+    text-align: start;
 }

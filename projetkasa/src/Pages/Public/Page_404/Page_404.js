@@ -1,5 +1,5 @@
 // Description: Page d'accueil du site
-import '@/Pages/Public/404/404.css';
+import '@/Pages/Public/Page_404/Page_404.css';
 
 // fonction d'appel de la page d'accueil
 const page404 = () => {

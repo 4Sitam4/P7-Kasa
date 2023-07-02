@@ -19,7 +19,7 @@ const Home = () => {
             <ul className='listelogements'>
                 {
                     GetAllLogement().map((logement) =>
-                        <NavLink key={logement.id} to={"/logement/" + logement.id + "/#"}>
+                        <NavLink key={logement.id} to={"/logement/" + logement.id}>
                             <Card key={logement.id} id={logement.id} image={logement.cover} titre={logement.title} />
                         </NavLink>
                     )
