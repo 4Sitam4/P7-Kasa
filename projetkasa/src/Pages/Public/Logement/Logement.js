@@ -1,23 +1,22 @@
-// Description: Page d'accueil du site
-
+import React from 'react'; 
+import { useParams} from 'react-router-dom';
 import '@/Pages/Public/Logement/Logement.css';
-import useLogementService from '@/_Services/LogementByID.service.js';
-// import Carrousel from '@/Components/Carrousel/Carrousel.js';
+import useLogementService from '@/_Services/useLogementService';
+import Carrousel from '@/Components/Carrousel/Carrousel.js';
 
-// fonction d'appel de la page d'accueil
 const Logement = () => {
-    const GetLogementById = useLogementService();
-
-    // récupération de l'id du logement
-    let url = new URL(window.location.href);
-    let sections = url.pathname.split('/');
-    let id = sections[sections.length - 2];
-
+    const { id } = useParams();
+    const { loading, logement } = useLogementService(id);
+    
+    if (loading) {
+        return <div>Chargement...</div>;
+    }
+    
     return (
         <section className="logement">
-            
-            
+            <Carrousel slides={logement.pictures} />
         </section>
     );
 };
+
 export default Logement;

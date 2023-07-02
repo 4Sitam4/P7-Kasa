@@ -1,24 +1,11 @@
-import { useState, useEffect } from 'react';
-
-export const useLogementService = () => {
-    const [logements, setLogements] = useState([]);
-
-    useEffect(() => {
-        const fetchLogements = async () => {
-            const response = await fetch('http://localhost:3030/logements');
-            if (!response.ok) {
-                throw new Error(`Erreur HTTP! status: ${response.status}`);
-            }
-            const data = await response.json();
-            setLogements(data);
-        }
-        fetchLogements();
-    }, []);
-
-    const GetLogementById = (id) => {
-        return logements.find(logement => logement.id === id);
+const fetchLogements = async (id) => {
+    
+    const response = await fetch('http://localhost:3030/logements/' + id);
+    if (!response.ok) {
+        throw new Error(`Erreur HTTP! status: ${response.status}`);
     }
-    return GetLogementById;
+    const data = await response.json();
+    return data;
 };
 
-export default useLogementService;
+export default fetchLogements;
