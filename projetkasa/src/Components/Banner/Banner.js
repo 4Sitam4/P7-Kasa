@@ -6,7 +6,9 @@ function Banner({ image, title}) {
         <section className="banner">
             <img className="banner-img" src={image} alt="Bannière" />
             <div className="banner-sombre"></div>
-            <h1>{title}</h1>
+            <h1>
+                    {title.map((line, index) => <p key={index}>{line}</p>)}
+            </h1>
         </section>
     )
 }

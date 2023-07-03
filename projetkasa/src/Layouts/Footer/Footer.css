@@ -2,21 +2,30 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    justify-content: center;
     background-color:black;
-    padding-top: 60px;
-    padding-bottom: 40px;
+    height: 210px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-
-    margin-top: auto;
+    font-size: 24px;
+}
+footer div.FooterContainer a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 p{
     color: white;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 img{
-    width: 128px;
+    width: 122px;
+}
+@media only screen and (max-width : 1024px){
+    
+}
+@media only screen and (max-width : 640px){
+    footer p{
+        font-size: 14px;
+    }
 }

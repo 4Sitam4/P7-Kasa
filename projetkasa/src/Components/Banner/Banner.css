@@ -1,11 +1,16 @@
+h1 p{
+    padding: 0;
+    margin: 0;
+}
 .banner {
-    border-radius: 25px;
+    border-radius: 10px;
     height: 225px;
     position: relative;
+    width: 100%;
 }
 
 .banner-img {
-    border-radius: 25px;
+    border-radius: 10px;
     height: 100%;
     object-fit: cover;
     width: 100%;
@@ -13,7 +18,7 @@
 
 .banner-sombre {
     background-color: #000000;
-    border-radius: 25px;
+    border-radius: 10px;
     height: 100%;
     left: 0;
     opacity: 0.3;
@@ -23,9 +28,16 @@
 }
 
 .banner h1 {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
     width: 100%;
-    top: 25%;
     text-align: center;
     color: #ffffff;
     font-size: 48px;
@@ -50,6 +62,14 @@
     }
 
     .banner h1 {
+        line-height: 20px;
+        top: 0;
+        left: 30px;
+        height: 100%;
+        text-align: left;
+        font-weight: 400;
         font-size: 24px;
+        width: fit-content;
+        width: -moz-fit-content;
     }
 }
