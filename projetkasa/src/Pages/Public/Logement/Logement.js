@@ -34,21 +34,21 @@ const Logement = () => {
             <Carrousel slides={logement.pictures} />
             <div className="logement__content">
                 <div className="Container_1">
-                    <div className="title_loc_tag">
+                    <div className="Div__title-loc-tag">
                         <h1 className="logement__title">{logement.title}</h1>
                         <p className="logement__location">{logement.location}</p>
                         <div className="TLC_tag-row">
                         <Tag tags={logement.tags} />
                         </div>
                     </div>
-                    <div className="Host_rating">
+                    <div className="Div__Host-rating">
                         <div className="Host">
                             <h2 className="Host__name">{logement.host.name}</h2>
                             <img className="Host__avatar" src={logement.host.picture} alt={logement.host.name} />
                         </div>
-                        <div className="Rating">
+                    
                             <Rating rating={logement.rating} />
-                        </div>
+                        
                     </div>
                 </div>
                     <div className="Container_2">

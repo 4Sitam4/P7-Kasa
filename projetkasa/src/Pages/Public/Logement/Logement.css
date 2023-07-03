@@ -1,3 +1,4 @@
+/* Logement Global */
 .logement{
     display: flex;
     flex-direction: column;
@@ -6,16 +7,86 @@
     margin-right: 20px;
 
 }
+/* Container_1 = Title, Location, Tags, Host info, Host Img, Rating */
+/* Div__title-loc-tag = Title, Location, Tags */
 .Container_1{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    align-items: stretch;
+    margin: 30px 0;
 }
-.title_loc_tag{
+.Div__title-loc-tag{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+.Div__title-loc-tag .TLC_tag-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+}
+.Div__title-loc-tag h1,.Div__title-loc-tag p{
+    margin: 0;
+    padding: 0;
+    color:#FF6060;
+}
+.Div__title-loc-tag h1{
+    font-size: 36px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+.Div__title-loc-tag p{
+    font-size: 18px;
+    font-weight: 400;
+}
+/* Div__Host-rating = Host info, Host Img Rating */
+.Div__Host-rating{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.Host{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.Host h2{
+    text-align: end;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF6060;
+    line-height: 25px;
+}
+.Host img{
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.Div__Host-rating .Rating{
+    margin-top: 15px;
+}
+/* Container_2 = Description, Equipements*/
+.Container_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 30px 0;
+    min-height: max-content;
+}
+.Container_2 .logement__description, .Container_2 .logement__equipements{
+    display: flex;
+    width: 47%;
 }

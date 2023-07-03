@@ -16,7 +16,7 @@ function Rating({ rating }) {
                             <FaStar
                                 className="star"
                                 color={ratingValue <= (rating) ? "#FF6060" : "#E3E3E3"}
-                                size={20}
+                                size={24}
                             />
                         </label>
                     );
