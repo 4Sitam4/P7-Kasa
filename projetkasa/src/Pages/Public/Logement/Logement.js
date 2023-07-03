@@ -37,7 +37,9 @@ const Logement = () => {
                     <div className="title_loc_tag">
                         <h1 className="logement__title">{logement.title}</h1>
                         <p className="logement__location">{logement.location}</p>
+                        <div className="TLC_tag-row">
                         <Tag tags={logement.tags} />
+                        </div>
                     </div>
                     <div className="Host_rating">
                         <div className="Host">
@@ -46,8 +48,9 @@ const Logement = () => {
                         </div>
                         <div className="Rating">
                             <Rating rating={logement.rating} />
-                        </div>  
+                        </div>
                     </div>
+                </div>
                     <div className="Container_2">
                         <div className="logement__description">
                             <Dropdown title="Description" content={logement.description} />
@@ -56,7 +59,6 @@ const Logement = () => {
                             <Dropdown title="Equipements" content={logement.equipments} />
                         </div>
                     </div>
-                </div>
             </div>
         </section>
     );
