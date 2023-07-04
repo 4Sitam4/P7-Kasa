@@ -30,8 +30,10 @@
 }
 .Carrousel .left-arrow,.Carrousel .right-arrow{
     position: absolute;
+    margin: 0;
+    padding: 0;
     top: 0%;
-    width: 40%;
+    width: 50%;
     height: 100%;
     cursor: pointer;
     background-color: transparent;
@@ -42,14 +44,15 @@
 }
 
 .Carrousel .left-arrow img,.Carrousel .right-arrow img {
-    width: 13%;
-    margin: 0px 25px;
+    height: 20%;
+    min-width: 20px;
+    margin: 0 2%;
 }
 
 .Carrousel .counter {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
+    bottom: 0;
+    width: 100%;
     color: #ffffff;
 }
 

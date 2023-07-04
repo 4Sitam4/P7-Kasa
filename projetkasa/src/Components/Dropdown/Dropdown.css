@@ -115,9 +115,10 @@ ul{
         font-size: 13px;
         font-weight: 500;
     }
-    .Dropdown_content{
-        font-size: 12px;
+    .Dropdown_content p,.Dropdown_content ul{
+        font-size: 14px;
         font-weight: 400;
+        gap: 0;
     }
     
 }
