@@ -11,17 +11,11 @@ Kasa is a website for renting house(s) / appartement(s).
 * React
 * npm
 * Craco
-* json-server
 
 ## Installation :
 * Clone the repository
 * Run `npm install`
 * Run `npm install -g craco`
-* Run `npm install -g json-server`
-
-### Start the API (json-server) :
-* Go to the folder `projetkasa`
-* Run `json-server --watch db.json --port 3030`
 
 ### Start the project (React) :
 * Go to the folder `projetkasa`
@@ -29,4 +23,3 @@ Kasa is a website for renting house(s) / appartement(s).
 
 ## Access :
 * Website : `http://localhost:3000/`
-* API : `http://localhost:3030/`
