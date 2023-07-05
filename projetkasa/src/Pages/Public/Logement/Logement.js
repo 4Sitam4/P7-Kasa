@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '@/Pages/Public/Logement/Logement.css';
-import useLogementService from '@/_Services/useLogementService';
+import { getLogementById } from '@/_Services/Logement.service.js';
 import Carrousel from '@/Components/Carrousel/Carrousel.js';
 import Tag from '@/Components/Tag/Tag';
 import Dropdown from '@/Components/Dropdown/Dropdown';
@@ -9,21 +9,21 @@ import Rating from '@/Components/Rating/Rating';
 
 const Logement = () => {
     const { id } = useParams();
-    const { loading, logement } = useLogementService(id);
-    const timerRef = useRef(null);
     const navigate = useNavigate();
+    const [logement, setLogement] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if (loading) {
-            timerRef.current = setTimeout(() => {
+        getLogementById(id)
+            .then(data => {
+                setLogement(data);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error(error);
                 navigate("/404");
-            }, 2000);
-        }
-
-        return () => {
-            clearTimeout(timerRef.current);
-        }
-    }, [loading, navigate]);
+            });
+    }, [id, navigate]);
 
     if (loading) {
         return <div>Chargement...</div>;
@@ -38,7 +38,7 @@ const Logement = () => {
                         <h1 className="logement__title">{logement.title}</h1>
                         <p className="logement__location">{logement.location}</p>
                         <div className="TLC_tag-row">
-                        <Tag tags={logement.tags} />
+                            <Tag tags={logement.tags} />
                         </div>
                     </div>
                     <div className="Div__Host-rating">
@@ -47,18 +47,18 @@ const Logement = () => {
                             <img className="Host__avatar" src={logement.host.picture} alt={logement.host.name} />
                         </div>
                     
-                            <Rating rating={logement.rating} />
+                        <Rating rating={logement.rating} />
                         
                     </div>
                 </div>
-                    <div className="Container_2">
-                        <div className="logement__description">
-                            <Dropdown title="Description" content={logement.description} />
-                        </div>
-                        <div className="logement__equipements">
-                            <Dropdown title="Equipements" content={logement.equipments} />
-                        </div>
+                <div className="Container_2">
+                    <div className="logement__description">
+                        <Dropdown title="Description" content={logement.description} />
                     </div>
+                    <div className="logement__equipements">
+                        <Dropdown title="Equipements" content={logement.equipments} />
+                    </div>
+                </div>
             </div>
         </section>
     );
