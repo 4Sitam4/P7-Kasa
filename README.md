@@ -12,13 +12,16 @@ Kasa is a website for renting house(s) / appartement(s).
 * npm
 * Craco
 
-## Installation :
+## Installation and start :
 * Clone the repository
+* Go to the folder `projetkasa`
+* Run `npm install`
+* Run `npm start`
+
+### If installation above doesn't work :
+* Go to the folder `projetkasa`
 * Run `npm install`
 * Run `npm install -g craco`
-
-### Start the project (React) :
-* Go to the folder `projetkasa`
 * Run `npm run craco`
 
 ## Access :
