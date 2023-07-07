@@ -24,12 +24,16 @@ function Carrousel({ slides }) {
     <div className='Carrousel'>
       <img className='Slider_img' src={slides[current]} alt='logement' />
 
-      <button className='left-arrow' onClick={prevSlide}>
-        <img src={leftarrow} alt='prev' />
-      </button>
-      <button className='right-arrow' onClick={nextSlide}>
-        <img src={rightarrow} alt='next' />
-      </button>
+      {slides.length > 1 && (
+        <>
+          <button className='left-arrow' onClick={prevSlide}>
+            <img src={leftarrow} alt='prev' />
+          </button>
+          <button className='right-arrow' onClick={nextSlide}>
+            <img src={rightarrow} alt='next' />
+          </button>
+        </>
+      )}
 
       <p className='counter'>{`${current + 1}/${slides.length}`}</p>
     </div>
